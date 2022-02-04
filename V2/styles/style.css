@@ -1,15 +1,23 @@
+/*Header*/
+
+
+.logo{
+    width: 250px;
+}
+
+
 /* Menu*/
 .menuLink:hover{
     transform: scale(1.1);
     color:lightcyan;
 }
 
-.dropdown {
-    position: relative;
+#dropdown {
+    position: fixed;
     display: inline-block;
     width: 100%;
-    
-  }
+}
+
 .menuImgDiv{
     background-color: cornflowerblue;
     width: 60px;
@@ -17,12 +25,24 @@
     z-index: 10;
     position: relative;
     box-shadow: 2px 0px;
+    border-radius: 10px;
 }
 
-.dropdown:hover .menuImg{
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
+.dropdownContainer {
+    width: 100%;
+    position: absolute;
+    height: 65.5px;
+    top: 0%;
+    left: -92.5%;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    font-size: 20px;
+    z-index: 1;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+  }
   
 .dropdownContentContainer {
     height: auto;
@@ -30,26 +50,22 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 95%;
-    position: absolute;
-    height: 60px;
-    top: 0%;
-    left: -86.5%;
-    transition: 0.2s;
-    transition-timing-function: ease-in-out;
-    font-size: 20px;
-    z-index: 1;
+    height: 65.5px;
+    margin-left: 5%;
     align-items: center;
   }
+
+.dropdownContainer:hover .menuImg{
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+}
   
-.dropdown:hover .dropdownContentContainer {
-    display: flex;
-    left: 5%;
+.dropdownContainer:hover {
+    left: 0%;
 }
 
 nav{
-    background-color:cornflowerblue;
     font-family: TW2;
-    
 }
 
 /*General*/
@@ -176,7 +192,6 @@ textarea{
 
 /*Footer*/
 footer {
-    background-color:gray;
     animation-name: rainbow;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -185,6 +200,7 @@ footer {
     text-align: center;
     padding: 10px;
     padding-right: 20px;
+    text-shadow: 2px 2px 2px black;
 }
 
 /*Miscelaneous*/
@@ -225,19 +241,13 @@ h3{
     font-size: 25px;
 }
 
-.logo{
-    width: 300px;
-}
-
 article{
     background-color: bisque;
     padding-top: 5px;
     padding-bottom: 20px;
-    border: 2px solid black;
+    border-top: 2px solid black;
     padding-left: 2%;
     padding-right: 2%;
-    border-radius: 10px;
-    margin: 5px;
 }
 
 .center{

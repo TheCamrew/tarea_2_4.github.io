@@ -8,28 +8,34 @@
         <meta name="author" content="Iago PL" />
         <meta name="keywords" content="HTML" />
         <link rel="stylesheet" href="styles/style.css">
+        <script type="text/javascript" src="/scripts/script.js"></script>
         <title>Shrek 1</title>
     </head>
 
     <body>
+        <script>
+            window.onload = test;
+        </script>
         <header>
             <div class="center">
                 <img src="img/logo.webp" class="logo">
             </div>
         </header>
-        <nav class="dropdown">
+        <nav id="dropdown">
             <div class="menuImgDiv">
                 <img src="img/menu/menu.png" height="60px">
             </div>
-            <div class="dropdownContentContainer">
-                <a href="#general" class="menuLink">Datos Generales</a>
-                <a href="#director" class="menuLink">Director</a>
-                <a href="#characters" class="menuLink">Personajes</a>
-                <a href="#stream" class="menuLink">Donde Verla</a>
-                <a href="#media" class="menuLink">Media</a>
-                <a href="#opinion" class="menuLink">Opiniones</a>
-                <a href="#links" class="menuLink">Mas Información</a>
-                <a href="#important" class="menuLink">Cosas Importantes</a>
+            <div class="dropdownContainer">
+                <div class="dropdownContentContainer">
+                    <a href="#general" class="menuLink">Datos Generales</a>
+                    <a href="#director" class="menuLink">Director</a>
+                    <a href="#characters" class="menuLink">Personajes</a>
+                    <a href="#stream" class="menuLink">Donde Verla</a>
+                    <a href="#media" class="menuLink">Media</a>
+                    <a href="#opinion" class="menuLink">Opiniones</a>
+                    <a href="#links" class="menuLink">Mas Información</a>
+                    <a href="#important" class="menuLink">Cosas Importantes</a>
+                </div>
                 <img src="img/menu/arrow.png" height="35px" class="menuImg">
             </div>
         </nav>
@@ -257,8 +263,8 @@
                             </div>  
                         </fieldset>
                         <div class="formButtonContainer">
-                            <input type="submit" class="button"/>
-                            <input type="reset"  class="button"/>
+                            <input type="submit" class="button" value="Enviar"/>
+                            <input type="reset"  class="button" value="Borrar"/>
                         </div>
                     </form>
                 </div>
